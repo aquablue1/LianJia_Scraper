@@ -13,9 +13,12 @@ def pageQuote(url_string):
     print(page.data.decode())
 
 
-if __name__ == '__main__':
+def homeScraper():
     search_target = '春江新城'
     search_target_parsed = urllib.parse.quote(search_target)
     print(search_target_parsed)
     url_string = "https://nj.lianjia.com/ershoufang/rs" + search_target_parsed + "/"
     pageQuote(url_string)
+
+if __name__ == '__main__':
+    homeScraper()
